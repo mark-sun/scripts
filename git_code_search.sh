@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 # git grep code search in non-test python files.
-git grep --break --heading --line-number $1 -- ":(exclude)*test*.py" "*.py"
+git grep --break --heading --line-number -C 2 $1 -- ":(exclude)*test*.py" "*.py"
 
 # Then, run:
 # chmod +x <path to this file>
